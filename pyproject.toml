@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ipshin"
+version = "0.1.0"
+description = "A simple and fast command-line toolkit for network analysis."
+authors = [
+    { name = "shakakibara12", email = "shakakibara@protonmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "GPL-3.0-or-later" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+]
+
+[project.urls]
+Homepage = "https://github.com/shakakibara12/Ipshin"
+Repository = "https://github.com/shakakibara12/Ipshin"
+"Bug Tracker" = "https://github.com/shakakibara12/Ipshin/issues"
+
+[project.scripts]
+asnfinder = "asnfinder:main"
+ipfinder = "ipfinder:main"
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+# This section tells setuptools which packages to include.
+[tool.setuptools.packages.find]
+where = ["src"]
